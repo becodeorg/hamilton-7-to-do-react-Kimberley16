@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Button from './components/button';
+import Checkbox from './components/checkbox';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <h1>My Todo App</h1>
+        <input type="text" id="name" name="name" required
+       minlength="4" maxlength="8" size="10"></input>
+        <Button></Button>
+          <div>
+            <h2>To do</h2>
+            <Checkbox></Checkbox>
+            <br />
+            <Checkbox></Checkbox>
+          </div>
+      </main>
     </div>
   );
 }
