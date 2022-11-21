@@ -10,7 +10,7 @@ export default function Checkbox(){
     },
   ];
     const [checks, setChecks] = useState (initialChecks);
-/*const [checked, setChecked] = useState(false); */
+    const [checked, setChecked] = useState(false)
     // function checkModify(event, check) {
      
     //   console.log (checked)
