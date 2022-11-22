@@ -1,8 +1,9 @@
 
 import ToDoList from './components/TodoList';
-import React, { useRef, useState} from "react";
+import React, { useRef, useState, useEffect} from "react";
 import Form from './components/form';
 
+const LSKEY = "MyTodoApp";
 
 function App() {
   const inputRef = useRef();
@@ -17,6 +18,11 @@ function App() {
     setTodos(newTodo);
     console.log(inputElement.value);
   }
+
+  useEffect(() => {
+    window.localStorage.setItem(LSKEY + ".todos", JSON.stringify(todos));
+  }, [todos]);
+
 
   return (
     <div className="App">
