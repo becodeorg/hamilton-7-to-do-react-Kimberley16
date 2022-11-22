@@ -1,4 +1,3 @@
-
 import ToDoList from './components/TodoList';
 import React, { useRef, useState, useEffect} from "react";
 import Form from './components/form';
@@ -7,16 +6,18 @@ const LSKEY = "MyTodoApp";
 
 function App() {
   const inputRef = useRef();
-  const initialTodos = ["Learn React", "be awesome"]
+
+  let initialTodos = JSON.parse(window.localStorage.getItem (LSKEY + ".todos"));
+
+  // const initialTodos = ["Learn React", "be awesome"]
   // let newTodo = [];
   const [todos, setTodos] = useState(initialTodos);
   function clickHandler() {
   const inputElement = inputRef.current;
-  // Do something with inputElement...
-    const newTodo = JSON.parse(JSON.stringify(todos));
-    newTodo.push(inputElement.value);
-    setTodos(newTodo);
-    console.log(inputElement.value);
+  const newTodo = JSON.parse(JSON.stringify(todos));
+  newTodo.push(inputElement.value);
+  setTodos(newTodo);
+  console.log(inputElement.value);
   }
 
   useEffect(() => {
