@@ -7,12 +7,12 @@ import Form from './components/form';
 function App() {
   const inputRef = useRef();
   const initialTodos = ["Learn React", "be awesome"]
-  let newTodo = [];
+  // let newTodo = [];
   const [todos, setTodos] = useState(initialTodos);
   function clickHandler() {
   const inputElement = inputRef.current;
   // Do something with inputElement...
-    newTodo= [...initialTodos];
+    const newTodo = JSON.parse(JSON.stringify(todos));
     newTodo.push(inputElement.value);
     setTodos(newTodo);
     console.log(inputElement.value);
