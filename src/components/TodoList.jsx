@@ -1,12 +1,6 @@
 import React, { useState } from "react";
-export default function ToDoList(){
-  const initialTodos = [{
-    text: "Learn React",
-    check: false},{
-    text: "be awesome",
-    check: false}]
-
-const [todos, setTodos] = useState(initialTodos);
+export default function ToDoList({todos}){ //veut dire que l'on va utiliser le todos qui est défini dans App
+  
 const [checked, setChecked] = useState(false)
 
 const modifyToDo = event => {
@@ -22,7 +16,7 @@ return (
         <div>
             <ul>
                 {todos.map((todo) => (
-                <li key={todo}><input type='checkbox' value={checked} onChange={modifyToDo}></input> {todo.text}</li>
+                <li key={todo}><input type='checkbox' value={checked} onChange={modifyToDo}></input> {todo}</li>
                 // <p> {todo.text}</p>
                 ))}
             </ul>

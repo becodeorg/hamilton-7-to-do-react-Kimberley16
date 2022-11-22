@@ -1,17 +1,20 @@
-import logo from './logo.svg';
-import Todosub from './components/todosub';
-import Button from './components/button';
+
 import ToDoList from './components/TodoList';
-import React, { useRef } from "react";
+import React, { useRef, useState} from "react";
 import Form from './components/form';
+
 
 function App() {
   const inputRef = useRef();
-
+  const initialTodos = ["Learn React", "be awesome"]
+  let newTodo = [];
+  const [todos, setTodos] = useState(initialTodos);
   function clickHandler() {
   const inputElement = inputRef.current;
-
-    // Do something with inputElement...
+  // Do something with inputElement...
+    newTodo= [...initialTodos];
+    newTodo.push(inputElement.value);
+    setTodos(newTodo);
     console.log(inputElement.value);
   }
 
@@ -20,8 +23,8 @@ function App() {
       <main>
         {/* <Todosub></Todosub>
         <Button></Button> */}
-        <Form></Form>
-       <ToDoList></ToDoList>
+        <Form inputRef={inputRef} clickHandler={clickHandler}></Form>
+       <ToDoList todos={todos}></ToDoList>
       </main>
     </div>
   );
