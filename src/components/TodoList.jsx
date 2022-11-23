@@ -15,7 +15,7 @@ return (
         <h2 >My Todo-list</h2>
         <div>
             <ul>
-                {todos.map((todo) => (
+                {todos.map(todo => (
                 <li key={todo}><input type='checkbox' value={checked} onChange={modifyToDo}></input> {todo}</li>
                 // <p> {todo.text}</p>
                 ))}

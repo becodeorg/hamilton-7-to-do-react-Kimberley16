@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.9931d0d0.css",
-    "main.js": "/static/js/main.d7eebd2e.js",
-    "static/js/787.69f2dec3.chunk.js": "/static/js/787.69f2dec3.chunk.js",
-    "index.html": "/index.html",
-    "main.9931d0d0.css.map": "/static/css/main.9931d0d0.css.map",
-    "main.d7eebd2e.js.map": "/static/js/main.d7eebd2e.js.map",
-    "787.69f2dec3.chunk.js.map": "/static/js/787.69f2dec3.chunk.js.map"
+    "main.css": "/hamilton-7-to-do-react-Kimberley16/static/css/main.9931d0d0.css",
+    "main.js": "/hamilton-7-to-do-react-Kimberley16/static/js/main.0b769740.js",
+    "static/js/787.69f2dec3.chunk.js": "/hamilton-7-to-do-react-Kimberley16/static/js/787.69f2dec3.chunk.js",
+    "index.html": "/hamilton-7-to-do-react-Kimberley16/index.html",
+    "main.9931d0d0.css.map": "/hamilton-7-to-do-react-Kimberley16/static/css/main.9931d0d0.css.map",
+    "main.0b769740.js.map": "/hamilton-7-to-do-react-Kimberley16/static/js/main.0b769740.js.map",
+    "787.69f2dec3.chunk.js.map": "/hamilton-7-to-do-react-Kimberley16/static/js/787.69f2dec3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9931d0d0.css",
-    "static/js/main.d7eebd2e.js"
+    "static/js/main.0b769740.js"
   ]
 }
