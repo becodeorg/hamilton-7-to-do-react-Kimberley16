@@ -7,11 +7,13 @@ const LSKEY = "MyTodoApp";
 function App() {
   const inputRef = useRef();
 
-  let initialTodos = JSON.parse(window.localStorage.getItem (LSKEY + ".todos"));
+  let initialTodos = [];
+  
+  const [todos, setTodos] = useState(() => {
+    initialTodos = JSON.parse(localStorage.getItem(LSKEY + ".todos"));
+    return initialTodos || [];
+  });
 
-  // const initialTodos = ["Learn React", "be awesome"]
-  // let newTodo = [];
-  const [todos, setTodos] = useState(initialTodos);
   function clickHandler() {
   const inputElement = inputRef.current;
   const newTodo = JSON.parse(JSON.stringify(todos));
